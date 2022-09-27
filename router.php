@@ -23,4 +23,8 @@ switch($params[0]) {
     case 'agregarTarea':
         $taskController->agregarTarea();
         break;
+    case 'finalizarTarea':
+        $id = $params[1];
+        $taskController->finalizarTarea($id);
+        break;
 }

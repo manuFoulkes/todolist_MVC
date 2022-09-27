@@ -25,6 +25,10 @@
             $sentecia-> execute([$title, $description]);
         }
 
+        function updateTarea($id) {
+            $sentencia = $this->db->prepare('UPDATE tarea SET completed=1 WHERE id=?');
+            $sentencia->execute([$id]); 
+        }
     }
 
 

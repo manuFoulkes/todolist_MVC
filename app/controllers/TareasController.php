@@ -24,6 +24,11 @@
             $tarea = $this->model->insertTarea($title, $description);
             header('Location: ' . BASE_URL);
         }
+
+        function finalizarTarea($id) {
+            $tarea = $this->model->updateTarea($id);
+            header('Location: ' . BASE_URL);
+        }
     }
 
 
