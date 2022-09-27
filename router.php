@@ -20,4 +20,7 @@ switch($params[0]) {
     case 'list':
         $taskController->mostrarTareas();
         break;
+    case 'agregarTarea':
+        $taskController->agregarTarea();
+        break;
 }

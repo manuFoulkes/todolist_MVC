@@ -13,10 +13,16 @@
         }
 
         function mostrarTareas() {
-
             $tareas = $this->model->GetTareas();
             $this->view->showTareas($tareas);
+        }
 
+        function agregarTarea() {
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+
+            $tarea = $this->model->insertTarea($title, $description);
+            header('Location: ' . BASE_URL);
         }
     }
 

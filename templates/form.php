@@ -1,6 +1,6 @@
 <!-- Formulario de alta de tarea -->
 
-<form action="add" method="POST" class="my-4">
+<form action="agregarTarea" method="POST" class="my-4">
     <div class="row">
         <div class="col-9">
             <div class="form-group">
