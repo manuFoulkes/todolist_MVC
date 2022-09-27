@@ -1,20 +1,16 @@
 <?php
 
-    include_once '../controller/TareasController.php';
+    
 
     class TareasModel {
 
+        private $db;
          
         function __construct() {
-            
+            $this->db = new PDO('mysql:host=localhost;'.'dbname=todo_list;charset=utf8', 'root', '');;
         }
 
-        private function Connect() {
-            $db = new PDO('mysql:host=localhost;'.'dbname=todo_list;charset=utf8', 'root', ''); 
-            return $db;
-        }
-
-        function getTareas() {
+        function GetTareas() {
             $sentecia = $this->db->prepare("SELECT * FROM tarea");
             $sentecia->execute();
             return $sentecia->fetchAll(PDO::FETCH_ASSOC); 

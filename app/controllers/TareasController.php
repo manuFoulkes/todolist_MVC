@@ -1,23 +1,21 @@
 <?php
-    include_once '../view/TareasView.php';
-    include_once '../model/TareasModel.php';
+    include_once './app/models/TareasModel.php';
+    include_once './app/views/TareasView.php';
 
-    class TareasController
-    {
+    class TareasController {
 
-        private $view;
         private $model;
+        private $view;
 
-        function __construct()
-        {
-            $this->view = new TareasView();
+        function __construct() {
             $this->model = new TareasModel();
+            $this->view = new TareasView();
         }
 
-        function Home() {
+        function mostrarTareas() {
 
-            $Tareas = $this->model->GetTareas();
-            $this->view->Mostrar($Tareas);
+            $tareas = $this->model->GetTareas();
+            $this->view->showTareas($tareas);
 
         }
     }
