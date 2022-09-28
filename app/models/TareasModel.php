@@ -29,6 +29,11 @@
             $sentencia = $this->db->prepare('UPDATE tarea SET completed=1 WHERE id=?');
             $sentencia->execute([$id]); 
         }
+
+        function deleteTarea($id) {
+            $sentencia = $this->db->prepare('DELETE FROM tarea WHERE id=?');
+            $sentencia->execute([$id]);
+        }
     }
 
 

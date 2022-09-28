@@ -27,4 +27,7 @@ switch($params[0]) {
         $id = $params[1];
         $taskController->finalizarTarea($id);
         break;
+    case 'eliminarTarea':
+        $id = $params[1];
+        $taskController->eliminarTarea($id);
 }

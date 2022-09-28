@@ -29,6 +29,11 @@
             $tarea = $this->model->updateTarea($id);
             header('Location: ' . BASE_URL);
         }
+
+        function eliminarTarea($id) {
+            $tarea = $this->model->deleteTarea($id);
+            header('Location: ' . BASE_URL);
+        }
     }
 
 
