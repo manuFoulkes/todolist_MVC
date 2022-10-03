@@ -25,10 +25,14 @@
             $sentecia-> execute([$title, $description]);
         }
 
+        // actualiza una tarea
+
         function updateTarea($id) {
             $sentencia = $this->db->prepare('UPDATE tarea SET completed=1 WHERE id=?');
             $sentencia->execute([$id]); 
         }
+
+        // elimina una tarea
 
         function deleteTarea($id) {
             $sentencia = $this->db->prepare('DELETE FROM tarea WHERE id=?');
